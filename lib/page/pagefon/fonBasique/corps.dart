@@ -56,7 +56,7 @@ class _CorpsPageState extends State<CorpsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Les nombres en fon")),
+      appBar: AppBar(title: Text("Les parties du corps")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, 
