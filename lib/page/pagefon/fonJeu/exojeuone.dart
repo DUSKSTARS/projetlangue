@@ -69,48 +69,102 @@ class _ExerciceFonState extends State<ExerciceFon> {
   }
 
   // Vérification des réponses
-  void checkAnswers() {
-    int newScore = 0;
-    for (var ex in currentExercices) {
-      if (selectedMatches[ex['fr']] == ex['fon']) {
-        newScore++;
-      }
-    }
-    setState(() {
-      score = newScore;
-      isFinished = true;
-    });
-    _saveScore();
+  // void checkAnswers() {
+  //   int newScore = 0;
+  //   for (var ex in currentExercices) {
+  //     if (selectedMatches[ex['fr']] == ex['fon']) {
+  //       newScore++;
+  //     }
+  //   }
+  //   setState(() {
+  //     score = newScore;
+  //     isFinished = true;
+  //   });
+  //   _saveScore();
 
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text("Niveau $currentLevel terminé"),
-        content: Text("Score : $score/${currentExercices.length}"),
-        actions: [
-          if (score == currentExercices.length)
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pop(currentLevel + 1); // Débloque le suivant
-              },
-              child: Text("👉 Retour au menu (niveau suivant débloqué)"),
-            ),
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) => AlertDialog(
+  //       title: Text("Niveau $currentLevel terminé"),
+  //       content: Text("Score : $score/${currentExercices.length}"),
+  //       actions: [
+  //         if (score == currentExercices.length)
+  //           TextButton(
+  //             onPressed: () {
+  //               Navigator.of(context).pop();
+  //               Navigator.of(context).pop(currentLevel + 1); // Débloque le suivant
+  //             },
+  //             child: Text("👉 Retour au menu (niveau suivant débloqué)"),
+  //           ),
+  //         TextButton(
+  //           onPressed: () {
+  //             Navigator.of(context).pop();
+  //             setState(() {
+  //               score = 0;
+  //               isFinished = false;
+  //               selectedMatches.clear();
+  //             });
+  //           },
+  //           child: Text("🔄 Recommencer"),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
+void checkAnswers() {
+  int newScore = 0;
+  for (var ex in currentExercices) {
+    if (selectedMatches[ex['fr']] == ex['fon']) {
+      newScore++;
+    }
+  }
+  setState(() {
+    score = newScore;
+    isFinished = true;
+  });
+  _saveScore();
+
+  bool isSuccess = score == currentExercices.length;
+
+  showDialog(
+    context: context,
+    builder: (context) => AlertDialog(
+      title: Text("Niveau $currentLevel terminé"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            isSuccess ? "assets/images/success.gif" : "assets/images/fail.gif",
+            height: 120,
+          ),
+          SizedBox(height: 12),
+          Text("Score : $score/${currentExercices.length}"),
+        ],
+      ),
+      actions: [
+        if (isSuccess)
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
-              setState(() {
-                score = 0;
-                isFinished = false;
-                selectedMatches.clear();
-              });
+              Navigator.of(context).pop(currentLevel + 1); // Débloque le suivant
             },
-            child: Text("🔄 Recommencer"),
+            child: Text("👉 Retour au menu (niveau suivant débloqué)"),
           ),
-        ],
-      ),
-    );
-  }
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+            setState(() {
+              score = 0;
+              isFinished = false;
+              selectedMatches.clear();
+            });
+          },
+          child: Text("🔄 Recommencer"),
+        ),
+      ],
+    ),
+  );
+}
 
   @override
   Widget build(BuildContext context) {
