@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:projetlangue/page/pagefon/fonBasique/exoun.dart';
 
 class SltPage extends StatefulWidget {
   @override
@@ -56,6 +57,9 @@ class _SltPageState extends State<SltPage> {
       case 8:
         fileName = 'jshqtsv.mp3';
         break;
+      case 9:
+        // Pas de son, car on affiche juste un bouton
+        return;
       default:
         return;
     }
@@ -133,22 +137,38 @@ class _SltPageState extends State<SltPage> {
               Text("Je suis heureux que tu sois venu", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
               Text("wǎ è a wa ɔ́ víví nú mi", style: TextStyle(fontSize: 20)),
-            ] else
+            ] else if (textIndex == 9) ...[
+              Text("Page spéciale",
+              style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExerciceFonun(),
+                    ),
+                  );
+                },
+                child: Text("Aller à la page spéciale"),
+              ),
+            ]
+            else ...[
               SizedBox(height: 30),
+            ],
 
             // Boutons alignés horizontalement
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FloatingActionButton(
-                  heroTag: "voiceButton",
-                  onPressed: playAudio, // Joue l'audio correspondant
-                  child: Icon(Icons.volume_up),
-                  backgroundColor: Colors.blue,
-                ),
+                if (textIndex != 9)
+                  FloatingActionButton(
+                    heroTag: "voiceButton",
+                    onPressed: playAudio,
+                    child: Icon(Icons.volume_up),
+                    backgroundColor: Colors.blue,
+                  ),
                 SizedBox(width: 20),
-
-
                 if (textIndex > 0)
                   FloatingActionButton(
                     heroTag: "backArrowButton",
@@ -160,11 +180,8 @@ class _SltPageState extends State<SltPage> {
                     child: Icon(Icons.arrow_back),
                     backgroundColor: Colors.orange,
                   ),
-
                 SizedBox(width: 20),
-
-
-                if (textIndex < 8)
+                if (textIndex < 9)
                   FloatingActionButton(
                     heroTag: "arrowButton",
                     onPressed: () {
@@ -175,8 +192,6 @@ class _SltPageState extends State<SltPage> {
                     child: Icon(Icons.arrow_forward),
                     backgroundColor: Colors.green,
                   ),
-
-                
               ],
             ),
           ],

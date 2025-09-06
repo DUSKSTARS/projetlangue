@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:projetlangue/page/pagefon/fonBasique/exodeux.dart';
 
 class NbrPage extends StatefulWidget {
   @override
@@ -467,9 +468,16 @@ class _NbrPageState extends State<NbrPage> {
               style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () { },
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExerciceFondeux(),
+                    ),
+                  );
+                },
                 child: Text("Aller à la page spéciale"),
-                ),
+              ),
             ]
             else ...[
               SizedBox(height: 30),

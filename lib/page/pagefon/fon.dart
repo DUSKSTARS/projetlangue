@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/salutation.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/nombre.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/phraseun.dart';
-import 'package:projetlangue/page/pagefon/fonBasique/exoun.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/corps.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/couleur.dart';
-import 'package:projetlangue/page/pagefon/fonBasique/objet.dart';
 import 'package:projetlangue/page/pagefon/fonjeu/jeuone.dart';
 // import 'package:sqflite/sqflite.dart';
 // import 'package:path/path.dart' as p;
@@ -248,45 +246,6 @@ class FonPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          // chemin vers la page des objets courants
-                          builder: (context) => ObjPage()
-                        ),);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
-                        width: 90.0,
-                        height: 90.0,
-                        child: Center(
-                          child: Text(
-                            "Object\ncourants",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
-                        ));
-                  }),
                 ],
               ),
               SizedBox(height: 25),
@@ -765,13 +724,6 @@ class FonPage extends StatelessWidget {
                           builder: (context) => PhrPage(),
                         ));
                   }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
-                        ));
-                  }),
                   imageButton('assets/images/hisun.png', () {}),
                   imageButton('assets/images/exoun.png', () {}),
                 ],
@@ -824,13 +776,6 @@ class FonPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
                         ));
                   }),
                   imageButton('assets/images/hisun.png', () {}),
@@ -887,13 +832,6 @@ class FonPage extends StatelessWidget {
                           builder: (context) => PhrPage(),
                         ));
                   }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
-                        ));
-                  }),
                   imageButton('assets/images/hisun.png', () {}),
                   imageButton('assets/images/exoun.png', () {}),
                 ],
@@ -946,13 +884,6 @@ class FonPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
                         ));
                   }),
                   imageButton('assets/images/hisun.png', () {}),
@@ -1009,13 +940,6 @@ class FonPage extends StatelessWidget {
                           builder: (context) => PhrPage(),
                         ));
                   }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
-                        ));
-                  }),
                   imageButton('assets/images/hisun.png', () {}),
                   imageButton('assets/images/exoun.png', () {}),
                 ],
@@ -1068,13 +992,6 @@ class FonPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/exounn.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ExerciceFon(),
                         ));
                   }),
                   imageButton('assets/images/hisun.png', () {}),

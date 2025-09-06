@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:projetlangue/page/pagefon/fonBasique/exoquatre.dart';
+
 
 class CorpsPage extends StatefulWidget {
   @override
@@ -165,7 +167,14 @@ class _CorpsPageState extends State<CorpsPage> {
               Text("Page spéciale", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ExerciceFonquatre(),
+                    ),
+                  );
+                },
                 child: Text("Aller à la page spéciale"),
               ),
             ]

@@ -6,13 +6,13 @@ import 'dart:async'; // Pour les délais ou opérations asynchrones
 import 'package:audioplayers/audioplayers.dart'; // Pour lire les fichiers audio
 
 // Déclaration du widget principal
-class ExerciceFonun extends StatefulWidget {
+class ExerciceFonquatre extends StatefulWidget {
   @override
-  _ExerciceFonunState createState() => _ExerciceFonunState(); // Création de l'état
+  _ExerciceFonquatreState createState() => _ExerciceFonquatreState(); // Création de l'état
 }
 
-// État du widget ExerciceFonun
-class _ExerciceFonunState extends State<ExerciceFonun> {
+// État du widget ExerciceFonquatre
+class _ExerciceFonquatreState extends State<ExerciceFonquatre> {
   final AudioPlayer _audioPlayer = AudioPlayer(); // Initialisation du lecteur audio
   int currentIndex = 0; // Index de la question actuelle
   int score = 0; // Score actuel de l'utilisateur
