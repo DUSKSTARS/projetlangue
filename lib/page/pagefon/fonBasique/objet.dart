@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class SltPage extends StatefulWidget {
+class ObjPage extends StatefulWidget {
   @override
-  _SltPageState createState() => _SltPageState();
+  _ObjPageState createState() => _ObjPageState();
 }
 
-class _SltPageState extends State<SltPage> {
+class _ObjPageState extends State<ObjPage> {
   int textIndex = 0; // 0 = Bonjour, 1 = Comment vas-tu ?, etc.
   final AudioPlayer _audioPlayer = AudioPlayer();
 

@@ -16,33 +16,60 @@ class _CorpsPageState extends State<CorpsPage> {
 
     switch (textIndex) {
       case 0:
-        fileName = 'u.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 1:
-        fileName = 'd.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 2:
-        fileName = 't.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 3:
-        fileName = 'q.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 4:
-        fileName = 'c.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 5:
-        fileName = 's.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 6:
-        fileName = 'se.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 7:
-        fileName = 'h.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 8:
-        fileName = 'n.mp3';
+        fileName = 'nnn.mp3';
         break;
       case 9:
+        fileName = 'nnn.mp3';
+        break;
+      case 10:
+        fileName = 'nnn.mp3';
+        break;
+      case 11:
+        fileName = 'nnn.mp3';
+        break;
+      case 12:
+        fileName = 'nnn.mp3';
+        break;
+      case 13:
+        fileName = 'nnn.mp3';
+        break;
+      case 14:
+        fileName = 'nnn.mp3';
+        break;
+      case 15:
+        fileName = 'nnn.mp3';
+        break;
+      case 16:
+        fileName = 'nnn.mp3';
+        break;
+      case 17:
+        fileName = 'nnn.mp3';
+        break;
+      case 18:
         // Pas de son, car on affiche juste un bouton
         return;
       default:
@@ -63,42 +90,78 @@ class _CorpsPageState extends State<CorpsPage> {
           crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
             if (textIndex == 0) ...[
-              Text("Un", style: TextStyle(fontSize: 20)),
+              Text("Tête", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("dokpo", style: TextStyle(fontSize: 20)),
+              Text("Ta [ta]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 1) ...[
-              Text("Deux", style: TextStyle(fontSize: 20)),
+              Text("Cheveux", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("we", style: TextStyle(fontSize: 20)),
+              Text("Ɖà [da]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 2) ...[
-              Text("Trois", style: TextStyle(fontSize: 20)),
+              Text("L’oreille", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("atɔn", style: TextStyle(fontSize: 20)),
+              Text("Tó [to]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 3) ...[
-              Text("Quatre", style: TextStyle(fontSize: 20)),
+              Text("la bouche", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("ɛnɛ", style: TextStyle(fontSize: 20)),
+              Text("Nù [nou]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 4) ...[
-              Text("Cinq", style: TextStyle(fontSize: 20)),
+              Text("les yeux", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("atɔ́ɔ́n", style: TextStyle(fontSize: 20)),
+              Text("Nukún [noukoun]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 5) ...[
-              Text("Six", style: TextStyle(fontSize: 20)),
+              Text("le nez", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("ayizɛn", style: TextStyle(fontSize: 20)),
+              Text("Awɔntín [awontin]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 6) ...[
-              Text("Sept", style: TextStyle(fontSize: 20)),
+              Text("le cou", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("tɛnwe", style: TextStyle(fontSize: 20)),
+              Text("Kɔ [kor]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 7) ...[
-              Text("Huit", style: TextStyle(fontSize: 20)),
+              Text("la poitrine", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("tantɔ́n", style: TextStyle(fontSize: 20)),
+              Text("Akɔ́nta [ajonta]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 8) ...[
-              Text("Neuf", style: TextStyle(fontSize: 20)),
+              Text("le ventre", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
-              Text("tɛnnɛ", style: TextStyle(fontSize: 20)),
+              Text("Adɔgo [adorgo]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 9) ...[
+              Text("le bras", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Awà [awa]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 10) ...[
+              Text("le coude", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Awagóli [awagoli]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 11) ...[
+              Text("la main", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Alɔ [alor]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 12) ...[
+              Text("les doigts", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Alɔví [alorvi]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 13) ...[
+              Text("la cuisse", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Asá [assa]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 14) ...[
+              Text("la jambe", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Gɛtɛ́ [guétè]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 15) ...[
+              Text("le genou", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Koligó [koligo]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 16) ...[
+              Text("le pied", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Afɔ [afor]", style: TextStyle(fontSize: 20)),
+            ]else if (textIndex == 17) ...[
+              Text("les orteils", style: TextStyle(fontSize: 20)),
+              SizedBox(height: 20),
+              Text("Afɔví [aforvi]", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 18) ...[
               Text("Page spéciale", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
               ElevatedButton(
@@ -114,20 +177,12 @@ class _CorpsPageState extends State<CorpsPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // FloatingActionButton(
-                //   heroTag: "voiceButton",
-                //   onPressed: playAudio, // Joue l'audio correspondant
-                //   child: Icon(Icons.mic),
-                //   backgroundColor: Colors.blue,
-                // ),
 
-                
-
-                if (textIndex != 9)
+                if (textIndex != 18)
                   FloatingActionButton(
                     heroTag: "voiceButton",
                     onPressed: playAudio,
-                    child: Icon(Icons.mic),
+                    child: Icon(Icons.volume_up),
                     backgroundColor: Colors.blue,
                   ),
 
@@ -147,7 +202,7 @@ class _CorpsPageState extends State<CorpsPage> {
 
                 SizedBox(width: 20),
 
-                if (textIndex < 9)
+                if (textIndex < 18)
                   FloatingActionButton(
                     heroTag: "arrowButton",
                     onPressed: () {

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class SltPage extends StatefulWidget {
+class CltPage extends StatefulWidget {
   @override
-  _SltPageState createState() => _SltPageState();
+  _CltPageState createState() => _CltPageState();
 }
 
-class _SltPageState extends State<SltPage> {
+class _CltPageState extends State<CltPage> {
   int textIndex = 0; // 0 = Bonjour, 1 = Comment vas-tu ?, etc.
   final AudioPlayer _audioPlayer = AudioPlayer();
 
@@ -80,59 +80,95 @@ class _SltPageState extends State<SltPage> {
           crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
             if (textIndex == 0) ...[
-              Image.asset('assets/images/bjr.jpg', width: 200, height: 200),
+              Image.asset('assets/images/vert.jpg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Bonjour !", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Vert",
+                style: TextStyle(color: Colors.green, fontSize: 20), // tu peux aussi utiliser la couleur exacte
+              ),
               SizedBox(height: 20),
-              Text("a f̀ɔn à !", style: TextStyle(fontSize: 20)),
+              Text("Amamǔ (Amanmoun)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 1) ...[
-              Image.asset('assets/images/cmt.jpg', width: 200, height: 200),
+              Image.asset('assets/images/jaune.png', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Comment vas-tu ?", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Jaune",
+                style: TextStyle(color: Colors.yellow, fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("nɛ a de gbɔn ?", style: TextStyle(fontSize: 20)),
+              Text("Koklojó (Koklodjo)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 2) ...[
-              Image.asset('assets/images/bet.png', width: 200, height: 200),
+              Image.asset('assets/images/rouge.jpg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Je vais bien (et toi ?)", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Rouge",
+                style: TextStyle(color: Colors.red, fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("un do ganji (hwɛ lo ?)", style: TextStyle(fontSize: 20)),
+              Text("Vɔvɔ (Vorvor)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 3) ...[
-              Image.asset('assets/images/bet.png', width: 200, height: 200),
+              Image.asset('assets/images/bleu.jpg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Je vais bien aussi", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Bleu",
+                style: TextStyle(color: Colors.blue, fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("un do ganji mɔké", style: TextStyle(fontSize: 20)),
+              Text("Fɛ́sínɔ̀ (Fèsinnon)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 4) ...[
-              Image.asset('assets/images/bam.png', width: 200, height: 200),
+              Image.asset('assets/images/noir.jpeg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Bon après midi", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Noir",
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("kù do lé hwénu", style: TextStyle(fontSize: 20)),
+              Text("Wìwì (Wouiwoui)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 5) ...[
-              Image.asset('assets/images/dodo.png', width: 200, height: 200),
+              Image.asset('assets/images/blanc.png', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Bonne nuit !", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Blanc",
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("mǎwǔ ní fɔ́n mǐ !", style: TextStyle(fontSize: 20)),
+              Text("Wewé (Wéwé)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 6) ...[
-              Image.asset('assets/images/aur.jpg', width: 200, height: 200),
+              Image.asset('assets/images/cendre.jpg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Au revoir", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Cendre",
+                style: TextStyle(color: Color(0xFFB0B0B0), fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("ma yi bo wa", style: TextStyle(fontSize: 20)),
+              Text("Afín (afin)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 7) ...[
-              Image.asset('assets/images/nbr.png', width: 200, height: 200),
+              Image.asset('assets/images/marron.jpeg', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("A bientôt", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Marron",
+                style: TextStyle(color: Color(0xFF8B4513), fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("e yi zaan de", style: TextStyle(fontSize: 20)),
+              Text("Kɔ́sínnɔ̀ (Korsinnon)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 8) ...[
-              Image.asset('assets/images/nbr.png', width: 200, height: 200),
+              Image.asset('assets/images/violet.png', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Je suis heureux que tu sois venu", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text(
+                "Violet",
+                style: TextStyle(color: Color(0xFF800080), fontSize: 20),
+              ),
               SizedBox(height: 20),
-              Text("wǎ è a wa ɔ́ víví nú mi", style: TextStyle(fontSize: 20)),
+              Text("Kwlélésìn (Kouélésin)", style: TextStyle(fontSize: 20)),
+            ] else if (textIndex == 9) ...[
+              Image.asset('assets/images/or.jpg', width: 200, height: 200),
+              SizedBox(height: 20),
+              Text(
+                "Or",
+                style: TextStyle(color: Color(0xFFFFD700), fontSize: 20),
+              ),
+              SizedBox(height: 20),
+              Text("Síká (Sika)", style: TextStyle(fontSize: 20)),
             ] else
               SizedBox(height: 30),
 
@@ -148,7 +184,6 @@ class _SltPageState extends State<SltPage> {
                 ),
                 SizedBox(width: 20),
 
-
                 if (textIndex > 0)
                   FloatingActionButton(
                     heroTag: "backArrowButton",
@@ -163,8 +198,7 @@ class _SltPageState extends State<SltPage> {
 
                 SizedBox(width: 20),
 
-
-                if (textIndex < 8)
+                if (textIndex < 9)
                   FloatingActionButton(
                     heroTag: "arrowButton",
                     onPressed: () {
@@ -175,11 +209,10 @@ class _SltPageState extends State<SltPage> {
                     child: Icon(Icons.arrow_forward),
                     backgroundColor: Colors.green,
                   ),
-
-                
               ],
             ),
           ],
+
         ),
       ),
       floatingActionButton: FloatingActionButton(

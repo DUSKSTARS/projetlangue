@@ -4,45 +4,48 @@ import 'package:projetlangue/page/pagefon/fonBasique/nombre.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/phraseun.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/exoun.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/corps.dart';
-import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart' as p;
+import 'package:projetlangue/page/pagefon/fonBasique/couleur.dart';
+import 'package:projetlangue/page/pagefon/fonBasique/objet.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/jeuone.dart';
+// import 'package:sqflite/sqflite.dart';
+// import 'package:path/path.dart' as p;
 
 
 class FonPage extends StatelessWidget {
 
-Future<int> getAverageScore() async {
-  final dbPath = await getDatabasesPath();
-  final path = p.join(dbPath, 'scores.db');
+// Future<int> getAverageScore() async {
+//   final dbPath = await getDatabasesPath();
+//   final path = p.join(dbPath, 'scores.db');
 
-  final db = await openDatabase(
-    path,
-    version: 1,
-    onCreate: (db, version) {
-      return db.execute('''
-        CREATE TABLE IF NOT EXISTS scores (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
-          score INTEGER,
-          date TEXT
-        )
-      ''');
-    },
-  );
+//   final db = await openDatabase(
+//     path,
+//     version: 1,
+//     onCreate: (db, version) {
+//       return db.execute('''
+//         CREATE TABLE IF NOT EXISTS scores (
+//           id INTEGER PRIMARY KEY AUTOINCREMENT,
+//           score INTEGER,
+//           date TEXT
+//         )
+//       ''');
+//     },
+//   );
 
-  final List<Map<String, dynamic>> scores = await db.query('scores');
+//   final List<Map<String, dynamic>> scores = await db.query('scores');
 
-  if (scores.isEmpty) return 0;
+//   if (scores.isEmpty) return 0;
 
-  int total = 0;
-  for (var s in scores) {
-    total += s['score'] as int;
-  }
+//   int total = 0;
+//   for (var s in scores) {
+//     total += s['score'] as int;
+//   }
 
-  // Ton exoun.dart a exercices.length == 4
-  int totalQuestions = scores.length * 4;
-  int moyenne = ((total / totalQuestions) * 100).round();
+//   // Ton exoun.dart a exercices.length == 4
+//   int totalQuestions = scores.length * 4;
+//   int moyenne = ((total / totalQuestions) * 100).round();
 
-  return moyenne;
-}
+//   return moyenne;
+// }
 
 
 
@@ -191,7 +194,7 @@ Future<int> getAverageScore() async {
                         context,
                         MaterialPageRoute(
                           // il s'agit du chemin vers la page couleur
-                          builder: (context) => PhrPage()
+                          builder: (context) => CltPage()
                         ),);
                       },
                       child: Container(
@@ -253,7 +256,7 @@ Future<int> getAverageScore() async {
                         context,
                         MaterialPageRoute(
                           // chemin vers la page des objets courants
-                          builder: (context) => SltPage()
+                          builder: (context) => ObjPage()
                         ),);
                       },
                       child: Container(
@@ -288,26 +291,26 @@ Future<int> getAverageScore() async {
               ),
               SizedBox(height: 25),
 
-FutureBuilder<int>(
-  future: getAverageScore(),
-  builder: (context, snapshot) {
-    if (snapshot.connectionState == ConnectionState.waiting) {
-      return CircularProgressIndicator();
-    } else if (snapshot.hasError) {
-      return Text("Erreur lors du calcul du niveau");
-    } else {
-      final niveau = snapshot.data ?? 0;
-      return Text(
-        "Niveau actuel : $niveau%",
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
-          color: Colors.blueAccent,
-        ),
-      );
-    }
-  },
-),
+// FutureBuilder<int>(
+//   future: getAverageScore(),
+//   builder: (context, snapshot) {
+//     if (snapshot.connectionState == ConnectionState.waiting) {
+//       return CircularProgressIndicator();
+//     } else if (snapshot.hasError) {
+//       return Text("Erreur lors du calcul du niveau");
+//     } else {
+//       final niveau = snapshot.data ?? 0;
+//       return Text(
+//         "Niveau actuel : $niveau%",
+//         style: TextStyle(
+//           fontSize: 18,
+//           fontWeight: FontWeight.bold,
+//           color: Colors.blueAccent,
+//         ),
+//       );
+//     }
+//   },
+// ),
 
 
 
@@ -533,7 +536,7 @@ FutureBuilder<int>(
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SltPage()
+                          builder: (context) => JeuPage()
                         ),);
                       },
                       child: Container(
@@ -545,7 +548,7 @@ FutureBuilder<int>(
                         height: 90.0,
                         child: Center(
                           child: Text(
-                            "Salutation",
+                            "Jeu_1",
                             style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold,
