@@ -11,42 +11,6 @@ import 'package:projetlangue/page/pagefon/fonjeu/jeuone.dart';
 
 class FonPage extends StatelessWidget {
 
-// Future<int> getAverageScore() async {
-//   final dbPath = await getDatabasesPath();
-//   final path = p.join(dbPath, 'scores.db');
-
-//   final db = await openDatabase(
-//     path,
-//     version: 1,
-//     onCreate: (db, version) {
-//       return db.execute('''
-//         CREATE TABLE IF NOT EXISTS scores (
-//           id INTEGER PRIMARY KEY AUTOINCREMENT,
-//           score INTEGER,
-//           date TEXT
-//         )
-//       ''');
-//     },
-//   );
-
-//   final List<Map<String, dynamic>> scores = await db.query('scores');
-
-//   if (scores.isEmpty) return 0;
-
-//   int total = 0;
-//   for (var s in scores) {
-//     total += s['score'] as int;
-//   }
-
-//   // Ton exoun.dart a exercices.length == 4
-//   int totalQuestions = scores.length * 4;
-//   int moyenne = ((total / totalQuestions) * 100).round();
-
-//   return moyenne;
-// }
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,7 +70,14 @@ class FonPage extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6,
+                              offset: Offset(2, 2), // ombre décalée
+                            ),
+                          ],
                         ),
                         width: 90.0,
                         height: 90.0,
@@ -135,9 +106,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -165,9 +143,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -197,9 +182,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -228,9 +220,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -249,30 +248,6 @@ class FonPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 25),
-
-// FutureBuilder<int>(
-//   future: getAverageScore(),
-//   builder: (context, snapshot) {
-//     if (snapshot.connectionState == ConnectionState.waiting) {
-//       return CircularProgressIndicator();
-//     } else if (snapshot.hasError) {
-//       return Text("Erreur lors du calcul du niveau");
-//     } else {
-//       final niveau = snapshot.data ?? 0;
-//       return Text(
-//         "Niveau actuel : $niveau%",
-//         style: TextStyle(
-//           fontSize: 18,
-//           fontWeight: FontWeight.bold,
-//           color: Colors.blueAccent,
-//         ),
-//       );
-//     }
-//   },
-// ),
-
-
-
 
               // deuxieme partie
               Center(
@@ -313,9 +288,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -343,9 +325,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -373,9 +362,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -405,9 +401,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -436,9 +439,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -500,9 +510,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -530,9 +547,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -560,9 +584,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -592,9 +623,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -623,9 +661,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(
@@ -654,9 +699,16 @@ class FonPage extends StatelessWidget {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 123, 219, 155),
-                          shape: BoxShape.rectangle,
-                        ),
+    color: const Color.fromARGB(255, 123, 219, 155),
+    borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6,
+        offset: Offset(2, 2), // ombre décalée
+      ),
+    ],
+  ),
                         width: 90.0,
                         height: 90.0,
                         child: Center(

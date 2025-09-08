@@ -68,49 +68,7 @@ class _ExerciceFonState extends State<ExerciceFon> {
     });
   }
 
-  // Vérification des réponses
-  // void checkAnswers() {
-  //   int newScore = 0;
-  //   for (var ex in currentExercices) {
-  //     if (selectedMatches[ex['fr']] == ex['fon']) {
-  //       newScore++;
-  //     }
-  //   }
-  //   setState(() {
-  //     score = newScore;
-  //     isFinished = true;
-  //   });
-  //   _saveScore();
 
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => AlertDialog(
-  //       title: Text("Niveau $currentLevel terminé"),
-  //       content: Text("Score : $score/${currentExercices.length}"),
-  //       actions: [
-  //         if (score == currentExercices.length)
-  //           TextButton(
-  //             onPressed: () {
-  //               Navigator.of(context).pop();
-  //               Navigator.of(context).pop(currentLevel + 1); // Débloque le suivant
-  //             },
-  //             child: Text("👉 Retour au menu (niveau suivant débloqué)"),
-  //           ),
-  //         TextButton(
-  //           onPressed: () {
-  //             Navigator.of(context).pop();
-  //             setState(() {
-  //               score = 0;
-  //               isFinished = false;
-  //               selectedMatches.clear();
-  //             });
-  //           },
-  //           child: Text("🔄 Recommencer"),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
 void checkAnswers() {
   int newScore = 0;
   for (var ex in currentExercices) {
