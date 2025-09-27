@@ -67,7 +67,8 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
         feedbackMessage = "Correct!";
       } else {
         isAnswerCorrect = false;
-        feedbackMessage = "Incorrect. ${exercices[currentIndex]['explanation']}"; // Explication affichée
+        feedbackMessage =
+            "Incorrect. ${exercices[currentIndex]['explanation']}"; // Explication affichée
       }
     });
 
@@ -90,15 +91,20 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
   Future<void> _showFinalScore() async {
     final dbPath = await getDatabasesPath(); // Récupère le chemin de stockage
     final path = p.join(dbPath, 'scores.db'); // Nom du fichier base
+
+    // ⚠️ Supprime l’ancienne base (une seule fois pour éviter le bug de colonne manquante)
+    await deleteDatabase(path);
+
     final db = await openDatabase(
       path,
-      version: 1,
-      onCreate: (db, version) {
-        return db.execute('''
-          CREATE TABLE IF NOT EXISTS scores (
+      version: 3,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE scores (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             score INTEGER,
-            date TEXT
+            date TEXT,
+            categorie TEXT
           )
         ''');
       },
@@ -107,7 +113,8 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
     await db.insert('scores', {
       'score': score,
       'date': DateTime.now().toIso8601String(),
-    }); // Enregistrement du score et date
+      'categorie': 'nombres',
+    });
 
     // Affiche une boîte de dialogue
     showDialog(
@@ -136,25 +143,26 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
 
   // Fonction pour afficher les anciens scores enregistrés
   Future<void> showOldScores() async {
-    final dbPath = await getDatabasesPath(); // Chemin de la base
-    final path = p.join(dbPath, 'scores.db'); // Nom de la base
+    final dbPath = await getDatabasesPath();
+    final path = p.join(dbPath, 'scores.db');
+
     final db = await openDatabase(
       path,
-      version: 1,
-      onCreate: (db, version) {
-        return db.execute('''
-          CREATE TABLE IF NOT EXISTS scores (
+      version: 3,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE scores (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             score INTEGER,
-            date TEXT
+            date TEXT,
+            categorie TEXT
           )
         ''');
       },
     );
 
-    final List<Map<String, dynamic>> scores = await db.query('scores'); // Récupère les lignes
+    final List<Map<String, dynamic>> scores = await db.query('scores');
 
-    // Affichage d'une boîte de dialogue contenant la liste
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -170,14 +178,14 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
                     final s = scores[index];
                     return ListTile(
                       title: Text("Score : ${s['score']}"),
-                      subtitle: Text("Date : ${s['date']}"),
+                      subtitle: Text("Date : ${s['date']} — Catégorie : ${s['categorie']}"),
                     );
                   },
                 ),
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.pop(context), // Ferme le dialogue
+            onPressed: () => Navigator.pop(context),
             child: Text("Fermer"),
           )
         ],
@@ -187,16 +195,16 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
 
   @override
   Widget build(BuildContext context) {
-    double progress = (currentIndex + 1) / exercices.length; // Calcule la progression
+    double progress = (currentIndex + 1) / exercices.length;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Exercice : Français - Fon"), // Titre
+        title: Text("Exercice : Français - Fon"),
         actions: [
           IconButton(
-            icon: Icon(Icons.bar_chart), // Icône pour consulter les scores
+            icon: Icon(Icons.bar_chart),
             tooltip: "Voir les scores",
-            onPressed: showOldScores, // Appelle la fonction des anciens scores
+            onPressed: showOldScores,
           )
         ],
       ),
@@ -204,37 +212,37 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            LinearProgressIndicator(value: progress), // Barre de progression
+            LinearProgressIndicator(value: progress),
             SizedBox(height: 20),
 
             Text(
-              exercices[currentIndex]['fr'], // Affiche la phrase en français
+              exercices[currentIndex]['fr'],
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 50),
 
-            // Liste des options en bouton
             ...exercices[currentIndex]['options'].map<Widget>((option) {
-              Color buttonColor = Colors.white; // Couleur par défaut
+              Color buttonColor = Colors.white;
 
               if (selectedOption != null) {
                 if (option == exercices[currentIndex]['correct']) {
-                  buttonColor = selectedOption == option ? Colors.green : Colors.white;
+                  buttonColor =
+                      selectedOption == option ? Colors.green : Colors.white;
                 } else if (option == selectedOption) {
                   buttonColor = Colors.red;
                 }
               }
 
               return ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: buttonColor), // Applique la couleur
-                onPressed: selectedOption == null ? () => checkAnswer(option) : null, // Empêche de recliquer
+                style: ElevatedButton.styleFrom(backgroundColor: buttonColor),
+                onPressed:
+                    selectedOption == null ? () => checkAnswer(option) : null,
                 child: Text(option, style: TextStyle(fontSize: 18)),
               );
             }).toList(),
 
             SizedBox(height: 20),
 
-            // Affiche feedback si une réponse a été donnée
             if (selectedOption != null)
               Text(
                 feedbackMessage,
@@ -246,7 +254,6 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
 
             SizedBox(height: 50),
 
-            // Icône pour écouter l'audio
             IconButton(
               icon: Icon(Icons.volume_up, color: Colors.blue, size: 30),
               onPressed: () => playAudio(exercices[currentIndex]['audio']),
@@ -254,12 +261,10 @@ class _ExerciceFondeuxState extends State<ExerciceFondeux> {
           ],
         ),
       ),
-
-      // Bouton retour
       floatingActionButton: FloatingActionButton(
         heroTag: "returnButton",
         onPressed: () {
-          Navigator.pop(context); // Retour à l'écran précédent
+          Navigator.pop(context);
         },
         child: Text("Retour", style: TextStyle(fontSize: 10)),
         backgroundColor: Colors.red,

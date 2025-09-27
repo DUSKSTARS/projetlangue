@@ -186,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.all(30),
         children: [
           Image.asset(
-            'assets/images/dialogue3.jpeg',
+            'assets/images/7jKn.gif',
             height: 150,
             fit: BoxFit.contain,
           ),

@@ -9,6 +9,8 @@ class SltPage extends StatefulWidget {
 
 class _SltPageState extends State<SltPage> {
   int textIndex = 0; // 0 = Bonjour, 1 = Comment vas-tu ?, etc.
+  double volume = 1.0; // Volume par défaut (100%)
+
   final AudioPlayer _audioPlayer = AudioPlayer();
 
   @override
@@ -67,7 +69,7 @@ class _SltPageState extends State<SltPage> {
     String filePath = 'vocal/$fileName';
     // await _audioPlayer.play(AssetSource(filePath));
     try {
-      _audioPlayer.setVolume(1.0);
+      await _audioPlayer.setVolume(volume); // <-- utilise le volume actuel
       await _audioPlayer.play(AssetSource(filePath));
     } catch (e) {
       print('Erreur lors de la lecture audio : $e');
@@ -79,22 +81,41 @@ class _SltPageState extends State<SltPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
+        child: 
+        
+        Column(
           mainAxisAlignment: MainAxisAlignment.center, 
           crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
+            Text(
+              "Volume",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            Slider(
+              value: volume,
+              min: 0.0,
+              max: 1.0,
+              divisions: 10,
+              label: "${(volume * 100).round()}%",
+              onChanged: (value) {
+                setState(() {
+                  volume = value;
+                });
+                _audioPlayer.setVolume(volume);
+              },
+            ),
             if (textIndex == 0) ...[
               Image.asset('assets/images/bjr.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Bonjour !", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
-              Text("a f̀ɔn à !", style: TextStyle(fontSize: 20)),
+              Text("Dóo núwe !", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 1) ...[
               Image.asset('assets/images/cmt.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Comment vas-tu ?", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
-              Text("nɛ a de gbɔn ?", style: TextStyle(fontSize: 20)),
+              Text("nɛ a dé gbɔn ?", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 2) ...[
               Image.asset('assets/images/bet.png', width: 200, height: 200),
               SizedBox(height: 20),
@@ -104,11 +125,11 @@ class _SltPageState extends State<SltPage> {
             ] else if (textIndex == 3) ...[
               Image.asset('assets/images/bet.png', width: 200, height: 200),
               SizedBox(height: 20),
-              Text("Je vais bien aussi", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
+              Text("Bonjour a toi", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
-              Text("un do ganji mɔké", style: TextStyle(fontSize: 20)),
+              Text("Kùdó zǎnzǎn", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 4) ...[
-              Image.asset('assets/images/bam.png', width: 200, height: 200),
+              Image.asset('assets/images/bam.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Bon après midi", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
@@ -120,7 +141,7 @@ class _SltPageState extends State<SltPage> {
               SizedBox(height: 20),
               Text("mǎwǔ ní fɔ́n mǐ !", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 6) ...[
-              Image.asset('assets/images/aur.jpg', width: 200, height: 200),
+              Image.asset('assets/images/aure.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Au revoir", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),

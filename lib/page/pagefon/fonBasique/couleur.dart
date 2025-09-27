@@ -11,6 +11,8 @@ class CltPage extends StatefulWidget {
 class _CltPageState extends State<CltPage> {
   int textIndex = 0; // 0 = Bonjour, 1 = Comment vas-tu ?, etc.
   final AudioPlayer _audioPlayer = AudioPlayer();
+  double volume = 1.0; // volume par défaut 100%
+
 
   @override
   void initState() {
@@ -68,7 +70,7 @@ class _CltPageState extends State<CltPage> {
     String filePath = 'vocal/$fileName';
     // await _audioPlayer.play(AssetSource(filePath));
     try {
-      _audioPlayer.setVolume(1.0);
+      await _audioPlayer.setVolume(volume); // <-- appliquer le volume
       await _audioPlayer.play(AssetSource(filePath));
     } catch (e) {
       print('Erreur lors de la lecture audio : $e');
@@ -84,6 +86,28 @@ class _CltPageState extends State<CltPage> {
           mainAxisAlignment: MainAxisAlignment.center, 
           crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
+            Column(
+              children: [
+                Text(
+                  "Volume",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                Slider(
+                  value: volume,
+                  min: 0.0,
+                  max: 1.0,
+                  divisions: 10,
+                  label: "${(volume * 100).round()}%",
+                  onChanged: (value) {
+                    setState(() {
+                      volume = value;
+                    });
+                    _audioPlayer.setVolume(volume); // met à jour le volume instantanément
+                  },
+                ),
+              ],
+            ),
+
             if (textIndex == 0) ...[
               Image.asset('assets/images/vert.jpg', width: 200, height: 200),
               SizedBox(height: 20),

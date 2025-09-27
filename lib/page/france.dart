@@ -16,7 +16,7 @@ class FrancePage extends StatelessWidget {
         padding: EdgeInsets.all(30),
             children: [
               Image.asset(
-                'assets/images/iconne.jpeg',
+                'assets/images/dialogue3.gif',
                 height: 150,
                 fit: BoxFit.contain,
               ),

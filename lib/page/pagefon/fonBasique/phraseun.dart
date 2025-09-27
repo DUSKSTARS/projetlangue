@@ -8,14 +8,16 @@ class PhrPage extends StatefulWidget {
 
 class _PhrPageState extends State<PhrPage> {
   final AudioPlayer _audioPlayer = AudioPlayer();
+  double volume = 1.0; // Volume par défaut (100%)
 
   final List<Map<String, String>> phrases = [
-    {'fr': "Bonjour", 'fon': "A fon gbé", 'audio': "bjr.mp3"},
-    {'fr': "Comment vas-tu ?", 'fon': "Dɔ gbe na ?", 'audio': "cmtvt.mp3"},
+    {'fr': "Bonjour", 'fon': "Dóo núwe", 'audio': "bjr.mp3"},
+    {'fr': "Comment vas-tu ?", 'fon': "nɛ a de gbɔn ?", 'audio': "cmtvt.mp3"},
     {'fr': "Merci beaucoup", 'fon': "A kpe nu", 'audio': "merci.mp3"},
-    {'fr': "Je t'aime", 'fon': "Mè do wè", 'audio': "jetaime.mp3"},
+    {'fr': "Je t'aime", 'fon': "Un nyì wan nù wé", 'audio': "jetaime.mp3"},
     {'fr': "Au revoir", 'fon': "Dada gbé", 'audio': "nnn.mp3"},
-
+    {'fr': "Non", 'fon': "Eho", 'audio': "nnn.mp3"},
+    {'fr': "Mon Dieu !", 'fon': "Mawu", 'audio': "nnn.mp3"},
     // Nouvelles phrases
     {'fr': "Non", 'fon': "Eho", 'audio': "nnn.mp3"},
     {'fr': "Mon Dieu !", 'fon': "Mawu", 'audio': "nnn.mp3"},
@@ -39,51 +41,93 @@ class _PhrPageState extends State<PhrPage> {
     {'fr': "Doucement", 'fon': "Dedeme", 'audio': "nnn.mp3"},
   ];
 
-  void playAudio(String fileName) async {
-    await _audioPlayer.play(AssetSource('vocal/$fileName'));
-  }
+    void playAudio(String fileName) async {
+      try {
+        await _audioPlayer.setVolume(volume); // utilise le volume actuel
+        await _audioPlayer.play(AssetSource('vocal/$fileName'));
+      } catch (e) {
+        print('Erreur lors de la lecture audio : $e');
+      }
+    }
+
+    @override
+    void dispose() {
+      _audioPlayer.dispose();
+      super.dispose();
+    }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Phrases en français et en fon")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: phrases.length,
-          itemBuilder: (context, index) {
-            return Column(
+      body: Column(
+        children: [
+          // Slider de volume en haut
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            phrases[index]['fr']!,
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            phrases[index]['fon']!,
-                            style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.volume_up, color: Colors.blue),
-                      onPressed: () => playAudio(phrases[index]['audio']!),
-                    ),
-                  ],
+                Text("Volume", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                Expanded(
+                  child: Slider(
+                    value: volume,
+                    min: 0.0,
+                    max: 1.0,
+                    divisions: 10,
+                    label: "${(volume * 100).round()}%",
+                    onChanged: (value) {
+                      setState(() {
+                        volume = value;
+                      });
+                      _audioPlayer.setVolume(volume);
+                    },
+                  ),
                 ),
-                Divider(),
               ],
-            );
-          },
-        ),
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: phrases.length,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                phrases[index]['fr']!,
+                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                phrases[index]['fon']!,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.volume_up, color: Colors.blue),
+                          onPressed: () => playAudio(phrases[index]['audio']!),
+                        ),
+                      ],
+                    ),
+                    Divider(),
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         heroTag: "returnButton",
