@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class AidePage extends StatefulWidget {
+class EcolePage extends StatefulWidget {
   @override
-  _AidePageState createState() => _AidePageState();
+  _EcolePageState createState() => _EcolePageState();
 }
 
-class _AidePageState extends State<AidePage> {
+class _EcolePageState extends State<EcolePage> {
   final AudioPlayer _audioPlayer = AudioPlayer();
   double volume = 1.0; // volume par défaut (100%)
 
   final List<Map<String, String>> phrases = [
-    {'fr': "Aide", 'fon': "alɔdómε", 'audio': "bjr.mp3"},
-    {'fr': "Aider", 'fon': "dŏ alɔ̀ mε", 'audio': "cmtvt.mp3"},
-    {'fr': "Aider à charger sur la tête", 'fon': "ɖìɖă ɖŏ ta", 'audio': "merci.mp3"},
-    {'fr': "J'ai besoin d'aide", 'fon': "wa gɔ̀ alɔ̀ nú mi", 'audio': "jetaime.mp3"},
-    {'fr': "donne moi de l'eau", 'fon': "nă mi sí", 'audio': "nnn.mp3"},
-    {'fr': "Prête moi deux miles", 'fon': "Hwé Caki wé nú mi", 'audio': "nnn.mp3"},
-    {'fr': "Donne moi deux milles", 'fon': "Nă mi Caki wé", 'audio': "nnn.mp3"},
-    {'fr': "Je suis perdu", 'fon': "Un flú", 'audio': "nnn.mp3"},
-    {'fr': "Aidez moi svp!", 'fon': "kεnklέn! Mi gɔ̀ alɔ̀ nú mi", 'audio': "nnn.mp3"},
-    {'fr': "Merci beaucoup", 'fon': "A houanu kaka", 'audio': "nnn.mp3"},
+    {'fr': "c'est le livre du maître", 'fon': "mε̆sì sín wèmá wè", 'audio': "bjr.mp3"},
+    {'fr': "élève", 'fon': "àxɔ́mɛ́ví", 'audio': "cmtvt.mp3"},
+    {'fr': "apprenant", 'fon': "nùkplɔ́ntɔ́", 'audio': "merci.mp3"},
+    {'fr': "stylo", 'fon': "nùwlánnú", 'audio': "jetaime.mp3"},
+    {'fr': "ouvrir un livre", 'fon': "hùn wĕmà", 'audio': "nnn.mp3"},
+    {'fr': "table", 'fon': "távò", 'audio': "nnn.mp3"},
+    {'fr': "tableau noir", 'fon': "wèmàwlánxwlɛ̀", 'audio': "nnn.mp3"},
+    {'fr': "crayon", 'fon': "nùwlánnú", 'audio': "nnn.mp3"},
+    {'fr': "prend ton cahier", 'fon': "zé wèmá to wé", 'audio': "nnn.mp3"},
+    {'fr': "va au tableau", 'fon': "yi wèmàwlánxwlɛ̀ kɔ́n", 'audio': "nnn.mp3"},
     {'fr': "Svp ! Expliquez moi ça", 'fon': "kεnklέn! tín mὲ nú mi", 'audio': "nnn.mp3"},
+    {'fr': "exercice d'école", 'fon': "ázɔ azɔ̀mὲtɔ́n", 'audio': "nnn.mp3"},
+    {'fr': "directeur d'école", 'fon': "wèmàxɔ́mɛ́gán", 'audio': "nnn.mp3"},
 
   ];
 

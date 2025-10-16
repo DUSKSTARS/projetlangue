@@ -17,10 +17,8 @@ class _PhrPageState extends State<PhrPage> {
     {'fr': "Je t'aime", 'fon': "Un nyì wan nù wé", 'audio': "jetaime.mp3"},
     {'fr': "Au revoir", 'fon': "Dada gbé", 'audio': "nnn.mp3"},
     {'fr': "Non", 'fon': "Eho", 'audio': "nnn.mp3"},
-    {'fr': "Mon Dieu !", 'fon': "Mawu", 'audio': "nnn.mp3"},
-    // Nouvelles phrases
-    {'fr': "Non", 'fon': "Eho", 'audio': "nnn.mp3"},
-    {'fr': "Mon Dieu !", 'fon': "Mawu", 'audio': "nnn.mp3"},
+    {'fr': "Mon Dieu !", 'fon': "Mawu cɛ", 'audio': "nnn.mp3"},
+    
     {'fr': "Je suis fâché à toi.", 'fon': "Un sin xome nu we", 'audio': "nnn.mp3"},
     {'fr': "C'est faux, ce n'est pas vrai.", 'fon': "A din gbawe, nu gbo we ã", 'audio': "nnn.mp3"},
     {'fr': "Merci beaucoup", 'fon': "A houanu kaka", 'audio': "nnn.mp3"},
