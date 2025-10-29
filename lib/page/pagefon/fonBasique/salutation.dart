@@ -147,13 +147,13 @@ class _SltPageState extends State<SltPage> {
               SizedBox(height: 20),
               Text("ma yi bo wa", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 7) ...[
-              Image.asset('assets/images/nbr.png', width: 200, height: 200),
+              Image.asset('assets/images/aure.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("A bientôt", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
               Text("e yi zaan de", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 8) ...[
-              Image.asset('assets/images/nbr.png', width: 200, height: 200),
+              Image.asset('assets/images/wel.jpg', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Je suis heureux que tu sois venu", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),

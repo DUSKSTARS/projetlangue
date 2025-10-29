@@ -10,6 +10,7 @@ import 'package:projetlangue/page/pagefon/fonConvers/marche.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/aide.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/ecole.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/maison.dart';
+import 'package:projetlangue/page/pagefon/fonNourriture/fruits.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -950,60 +951,8 @@ class _FonPageState extends State<FonPage> {
               SizedBox(
                 height: 25,
               ),
-              Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.green, shape: BoxShape.circle),
-                  width: 150.0,
-                  height: 150.0,
-                  child: Center(
-                    child: Text(
-                      "Se faire\ndes amis",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Wrap(
-                alignment:
-                    WrapAlignment.center, // Centre les éléments horizontalement
-                spacing: 30, // Espace entre les images horizontalement
-                runSpacing: 30, // Espace entre les lignes
-                children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NbrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
+
+              // quatrieme partie
               Center(
                 child: Container(
                   decoration: BoxDecoration(
@@ -1012,7 +961,7 @@ class _FonPageState extends State<FonPage> {
                   height: 150.0,
                   child: Center(
                     child: Text(
-                      "Rendez-vous\namoureux",
+                      "Produits\nAlimentaires",
                       style: TextStyle(
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
@@ -1030,250 +979,200 @@ class _FonPageState extends State<FonPage> {
                 spacing: 30, // Espace entre les images horizontalement
                 runSpacing: 30, // Espace entre les lignes
                 children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
+                          builder: (context) => PrePage()
+                        ),);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 123, 219, 155),
+                          borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 6,
+                              offset: Offset(2, 2), // ombre décalée
+                            ),
+                          ],
+                        ),
+                        width: 90.0,
+                        height: 90.0,
+                        child: Center(
+                          child: Text(
+                            "Céréales &\nféculents",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NbrPage(),
+                          builder: (context) => AidePage(),
                         ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 123, 219, 155),
+                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 6,
+                            offset: Offset(2, 2), // ombre décalée
+                          ),
+                        ],
+                      ),
+                        width: 90.0,
+                        height: 90.0,
+                        child: Center(
+                          child: Text(
+                            "Légumes",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
+                          builder: (context) => MarchPage()
+                        ),);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 123, 219, 155),
+                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 6,
+                            offset: Offset(2, 2), // ombre décalée
+                          ),
+                        ],
+                      ),
+                        width: 90.0,
+                        height: 90.0,
+                        child: Center(
+                          child: Text(
+                            "Épices &\ncondiments",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {
+                        
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          // il s'agit du chemin vers la page couleur
+                          builder: (context) => EcolePage()
+                        ),);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 123, 219, 155),
+                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 6,
+                            offset: Offset(2, 2), // ombre décalée
+                          ),
+                        ],
+                      ),
+                        width: 90.0,
+                        height: 90.0,
+                        child: Center(
+                          child: Text(
+                            "Fruits",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          // il s'agit du chemin vers la page des parties du corps
+                          builder: (context) => MaisonPage()
+                        ),);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 123, 219, 155),
+                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black26,
+                            blurRadius: 6,
+                            offset: Offset(2, 2), // ombre décalée
+                          ),
+                        ],
+                      ),
+                        width: 90.0,
+                        height: 90.0,
+                        child: Center(
+                          child: Text(
+                            "Viandes &\npoissons",
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(
                 height: 25,
               ),
-              Center(
-                child: Container(
-                  decoration:
-                      BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-                  width: 150.0,
-                  height: 150.0,
-                  child: Center(
-                    child: Text(
-                      "Education",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Wrap(
-                alignment:
-                    WrapAlignment.center, // Centre les éléments horizontalement
-                spacing: 30, // Espace entre les images horizontalement
-                runSpacing: 30, // Espace entre les lignes
-                children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NbrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.green, shape: BoxShape.circle),
-                  width: 150.0,
-                  height: 150.0,
-                  child: Center(
-                    child: Text(
-                      "Voyage",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Wrap(
-                alignment:
-                    WrapAlignment.center, // Centre les éléments horizontalement
-                spacing: 30, // Espace entre les images horizontalement
-                runSpacing: 30, // Espace entre les lignes
-                children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NbrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.yellow, shape: BoxShape.circle),
-                  width: 150.0,
-                  height: 150.0,
-                  child: Center(
-                    child: Text(
-                      "Travail",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Wrap(
-                alignment:
-                    WrapAlignment.center, // Centre les éléments horizontalement
-                spacing: 30, // Espace entre les images horizontalement
-                runSpacing: 30, // Espace entre les lignes
-                children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NbrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
-                ],
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Center(
-                child: Container(
-                  decoration:
-                      BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-                  width: 150.0,
-                  height: 150.0,
-                  child: Center(
-                    child: Text(
-                      "Nourriture",
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Wrap(
-                alignment:
-                    WrapAlignment.center, // Centre les éléments horizontalement
-                spacing: 30, // Espace entre les images horizontalement
-                runSpacing: 30, // Espace entre les lignes
-                children: [
-                  imageButton('assets/images/slt.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => SltPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/nbr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NbrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/phr.png', () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PhrPage(),
-                        ));
-                  }),
-                  imageButton('assets/images/hisun.png', () {}),
-                  imageButton('assets/images/exoun.png', () {}),
-                ],
-              ),
-              SizedBox(
-                height: 15,
-              ),
+
             ],
           ),
         ),
