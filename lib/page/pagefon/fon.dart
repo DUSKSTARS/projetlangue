@@ -13,6 +13,8 @@ import 'package:projetlangue/page/pagefon/fonConvers/maison.dart';
 import 'package:projetlangue/page/pagefon/fonNourriture/fruits.dart';
 import 'package:projetlangue/page/pagefon/fonNourriture/legume.dart';
 import 'package:projetlangue/page/pagefon/fonNourriture/epice.dart';
+import 'package:projetlangue/page/pagefon/fonNourriture/mesfruits.dart';
+import 'package:projetlangue/page/pagefon/fonNourriture/viande.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -988,7 +990,7 @@ class _FonPageState extends State<FonPage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PrePage()
+                          builder: (context) => FruitPage()
                         ),);
                       },
                       child: Container(
@@ -1025,7 +1027,7 @@ class _FonPageState extends State<FonPage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => FruitPage(),
+                          builder: (context) => LegumePage(),
                         ));
                       },
                       child: Container(
@@ -1062,7 +1064,7 @@ class _FonPageState extends State<FonPage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LegumePage(),
+                          builder: (context) => EpicePage(),
                         ),);
                       },
                       child: Container(
@@ -1101,7 +1103,7 @@ class _FonPageState extends State<FonPage> {
                         context,
                         MaterialPageRoute(
                           // il s'agit du chemin vers la page couleur
-                          builder: (context) => EpicePage()
+                          builder: (context) => MesfruitsPage()
                         ),);
                       },
                       child: Container(
@@ -1139,7 +1141,7 @@ class _FonPageState extends State<FonPage> {
                         context,
                         MaterialPageRoute(
                           // il s'agit du chemin vers la page des parties du corps
-                          builder: (context) => MaisonPage()
+                          builder: (context) => ViandePage()
                         ),);
                       },
                       child: Container(
