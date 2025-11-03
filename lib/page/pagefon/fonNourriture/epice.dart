@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class FruitPage extends StatefulWidget {
+class EpicePage extends StatefulWidget {
   @override
-  _FruitPageState createState() => _FruitPageState();
+  _EpicePageState createState() => _EpicePageState();
 }
 
-class _FruitPageState extends State<FruitPage> {
+class _EpicePageState extends State<EpicePage> {
   final AudioPlayer _audioPlayer = AudioPlayer();
   double volume = 1.0; // volume par défaut (100%)
 
   final List<Map<String, String>> phrases = [
-    {'fr': "Riz", 'fon': "mɔ̆likú", 'audio': "bjr.mp3"},
-    {'fr': "Maïs", 'fon': "gbadé", 'audio': "cmtvt.mp3"},
-    {'fr': "Sorgho", 'fon': "abɔ̀", 'audio': "merci.mp3"},
-    {'fr': "Manioc", 'fon': "fεnnyέn", 'audio': "jetaime.mp3"},
-    {'fr': "Igname", 'fon': "teví", 'audio': "nnn.mp3"},
-    {'fr': "Haricots secs", 'fon': "ayikún", 'audio': "nnn.mp3"},
-    {'fr': "haricots cuits", 'fon': "abɔbɔ̀", 'audio': "nnn.mp3"},
-    {'fr': "pois", 'fon': "ayikún", 'audio': "nnn.mp3"},
-    {'fr': "pois chiche", 'fon': "aziígòkwín", 'audio': "nnn.mp3"},
-    {'fr': "Taro", 'fon': "glὲn", 'audio': "nnn.mp3"},
+    {'fr': "Poivre", 'fon': "lε̆nlεnkún", 'audio': "bjr.mp3"},
+    {'fr': "Gingembre", 'fon': "dotε", 'audio': "cmtvt.mp3"},
+    {'fr': "Clou de girofle", 'fon': "atínkεn gbăɖota", 'audio': "merci.mp3"},
+    {'fr': "Piment", 'fon': "takín", 'audio': "nnn.mp3"},
+    {'fr': "Sel", 'fon': "jὲ", 'audio': "jetaime.mp3"},
+    {'fr': "Oignon", 'fon': "ayomà", 'audio': "nnn.mp3"},
+    {'fr': "Ail", 'fon': "áyò", 'audio': "nnn.mp3"},
+    {'fr': "", 'fon': "ayomà", 'audio': "nnn.mp3"},
+    {'fr': "", 'fon': "áyò", 'audio': "nnn.mp3"},
 
   ];
 
