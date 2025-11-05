@@ -18,8 +18,6 @@ class _EpicePageState extends State<EpicePage> {
     {'fr': "Sel", 'fon': "jὲ", 'audio': "jetaime.mp3"},
     {'fr': "Oignon", 'fon': "ayomà", 'audio': "nnn.mp3"},
     {'fr': "Ail", 'fon': "áyò", 'audio': "nnn.mp3"},
-    {'fr': "", 'fon': "ayomà", 'audio': "nnn.mp3"},
-    {'fr': "", 'fon': "áyò", 'audio': "nnn.mp3"},
 
   ];
 

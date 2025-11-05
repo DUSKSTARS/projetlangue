@@ -5,6 +5,7 @@ import 'package:projetlangue/page/pagefon/fonBasique/phraseun.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/corps.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/couleur.dart';
 import 'package:projetlangue/page/pagefon/fonjeu/jeuone.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/jeutwo.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/presenter.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/marche.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/aide.dart';
@@ -768,7 +769,7 @@ class _FonPageState extends State<FonPage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => NbrPage(),
+                          builder: (context) => JeuDPage(),
                         ));
                       },
                       child: Container(
@@ -787,7 +788,7 @@ class _FonPageState extends State<FonPage> {
                         height: 90.0,
                         child: Center(
                           child: Text(
-                            "Les nombres",
+                            "Jeu 2",
                             style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold,
