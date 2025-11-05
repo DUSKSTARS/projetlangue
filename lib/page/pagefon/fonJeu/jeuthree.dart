@@ -2,20 +2,20 @@
 import 'package:flutter/material.dart';
 
 // Import de la page du niveau 1
-import 'package:projetlangue/page/pagefon/fonjeu/exojeuone.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/exojeuthreeone.dart';
 // Import de la page du niveau 2
-import 'package:projetlangue/page/pagefon/fonjeu/exojeutwo.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/exojeuthreetwo.dart';
 // Import de la page du niveau 3
-import 'package:projetlangue/page/pagefon/fonjeu/exojeuthree.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/exojeuthreethree.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Déclaration d'un widget Stateful pour la page principale du jeu
-class JeuPage extends StatefulWidget {
+class JeuTPage extends StatefulWidget {
   @override
-  _JeuPageState createState() => _JeuPageState(); // Création de l'état associé à ce widget
+  _JeuTPageState createState() => _JeuTPageState(); // Création de l'état associé à ce widget
 }
 
-class _JeuPageState extends State<JeuPage> {
+class _JeuTPageState extends State<JeuTPage> {
   int unlockedLevel = 1;
 
   @override
@@ -27,13 +27,13 @@ class _JeuPageState extends State<JeuPage> {
   Future<void> _loadUnlockedLevel() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      unlockedLevel = prefs.getInt('unlockedLevel_jeu1') ?? 1;
+      unlockedLevel = prefs.getInt('unlockedLevel_jeu3') ?? 1;
     });
   }
 
   Future<void> _saveUnlockedLevel(int level) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('unlockedLevel_jeu1', level);
+    await prefs.setInt('unlockedLevel_jeu3', level);
   }
 
 
@@ -59,11 +59,11 @@ class _JeuPageState extends State<JeuPage> {
                   ? () {
                       Widget page;
                       if (level == 1) {
-                        page = ExerciceFon(startLevel: level);
+                        page = JeuMotManquant(startLevel: level);
                       } else if (level == 2) {
-                        page = ExoJeuTwo(level: level);
+                        page = JeuVraiFaux(level: level);
                       } else {
-                        page = ExoJeuThree(level: level);
+                        page = JeuTapMot(level: level);
                       }
 
                       Navigator.push(

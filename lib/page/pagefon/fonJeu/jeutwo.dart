@@ -27,14 +27,15 @@ class _JeuDPageState extends State<JeuDPage> {
   Future<void> _loadUnlockedLevel() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      unlockedLevel = prefs.getInt('unlockedLevel') ?? 1;
+      unlockedLevel = prefs.getInt('unlockedLevel_jeu2') ?? 1;
     });
   }
 
   Future<void> _saveUnlockedLevel(int level) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('unlockedLevel', level);
+    await prefs.setInt('unlockedLevel_jeu2', level);
   }
+
 
   @override
   Widget build(BuildContext context) {

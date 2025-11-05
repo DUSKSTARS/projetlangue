@@ -6,6 +6,7 @@ import 'package:projetlangue/page/pagefon/fonBasique/corps.dart';
 import 'package:projetlangue/page/pagefon/fonBasique/couleur.dart';
 import 'package:projetlangue/page/pagefon/fonjeu/jeuone.dart';
 import 'package:projetlangue/page/pagefon/fonjeu/jeutwo.dart';
+import 'package:projetlangue/page/pagefon/fonjeu/jeuthree.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/presenter.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/marche.dart';
 import 'package:projetlangue/page/pagefon/fonConvers/aide.dart';
@@ -806,7 +807,7 @@ class _FonPageState extends State<FonPage> {
                         Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PhrPage()
+                          builder: (context) => JeuTPage()
                         ),);
                       },
                       child: Container(
@@ -825,7 +826,7 @@ class _FonPageState extends State<FonPage> {
                         height: 90.0,
                         child: Center(
                           child: Text(
-                            "Phrases\nBasiques",
+                            "Jeu 3",
                             style: TextStyle(
                               fontSize: 15.0,
                               fontWeight: FontWeight.bold,
@@ -836,121 +837,121 @@ class _FonPageState extends State<FonPage> {
                       ),
                     ),
                   ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
+                  // Material(
+                  //   color: Colors.transparent,
+                  //   child: InkWell(
+                  //     onTap: () {
                         
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          // il s'agit du chemin vers la page couleur
-                          builder: (context) => PhrPage()
-                        ),);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 123, 219, 155),
-                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 6,
-                            offset: Offset(2, 2), // ombre décalée
-                          ),
-                        ],
-                      ),
-                        width: 90.0,
-                        height: 90.0,
-                        child: Center(
-                          child: Text(
-                            "Couleurs",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          // il s'agit du chemin vers la page des parties du corps
-                          builder: (context) => CorpsPage()
-                        ),);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 123, 219, 155),
-                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 6,
-                            offset: Offset(2, 2), // ombre décalée
-                          ),
-                        ],
-                      ),
-                        width: 90.0,
-                        height: 90.0,
-                        child: Center(
-                          child: Text(
-                            "Parties\ndu corps",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          // chemin vers la page des objets courants
-                          builder: (context) => SltPage()
-                        ),);
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 123, 219, 155),
-                        borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black26,
-                            blurRadius: 6,
-                            offset: Offset(2, 2), // ombre décalée
-                          ),
-                        ],
-                      ),
-                        width: 90.0,
-                        height: 90.0,
-                        child: Center(
-                          child: Text(
-                            "Object\ncourants",
-                            style: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  //       Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         // il s'agit du chemin vers la page couleur
+                  //         builder: (context) => PhrPage()
+                  //       ),);
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //       color: const Color.fromARGB(255, 123, 219, 155),
+                  //       borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: Colors.black26,
+                  //           blurRadius: 6,
+                  //           offset: Offset(2, 2), // ombre décalée
+                  //         ),
+                  //       ],
+                  //     ),
+                  //       width: 90.0,
+                  //       height: 90.0,
+                  //       child: Center(
+                  //         child: Text(
+                  //           "Couleurs",
+                  //           style: TextStyle(
+                  //             fontSize: 15.0,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //           textAlign: TextAlign.center,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // Material(
+                  //   color: Colors.transparent,
+                  //   child: InkWell(
+                  //     onTap: () {
+                  //       Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         // il s'agit du chemin vers la page des parties du corps
+                  //         builder: (context) => CorpsPage()
+                  //       ),);
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //       color: const Color.fromARGB(255, 123, 219, 155),
+                  //       borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: Colors.black26,
+                  //           blurRadius: 6,
+                  //           offset: Offset(2, 2), // ombre décalée
+                  //         ),
+                  //       ],
+                  //     ),
+                  //       width: 90.0,
+                  //       height: 90.0,
+                  //       child: Center(
+                  //         child: Text(
+                  //           "Parties\ndu corps",
+                  //           style: TextStyle(
+                  //             fontSize: 15.0,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //           textAlign: TextAlign.center,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  // Material(
+                  //   color: Colors.transparent,
+                  //   child: InkWell(
+                  //     onTap: () {
+                  //       Navigator.push(
+                  //       context,
+                  //       MaterialPageRoute(
+                  //         // chemin vers la page des objets courants
+                  //         builder: (context) => SltPage()
+                  //       ),);
+                  //     },
+                  //     child: Container(
+                  //       decoration: BoxDecoration(
+                  //       color: const Color.fromARGB(255, 123, 219, 155),
+                  //       borderRadius: BorderRadius.circular(16), // ✅ coins arrondis
+                  //       boxShadow: [
+                  //         BoxShadow(
+                  //           color: Colors.black26,
+                  //           blurRadius: 6,
+                  //           offset: Offset(2, 2), // ombre décalée
+                  //         ),
+                  //       ],
+                  //     ),
+                  //       width: 90.0,
+                  //       height: 90.0,
+                  //       child: Center(
+                  //         child: Text(
+                  //           "Object\ncourants",
+                  //           style: TextStyle(
+                  //             fontSize: 15.0,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //           textAlign: TextAlign.center,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
               SizedBox(
