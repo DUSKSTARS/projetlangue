@@ -23,30 +23,30 @@ class _ExerciceFonquatreState extends State<ExerciceFonquatre> {
   // Liste des questions avec leurs réponses, options, audio, etc.
   final List<Map<String, dynamic>> exercices = [
     {
-      'fr': "Bonjour",
-      'options': ["a f̀ɔn à", "Dada gbé", "Mè do wè"],
-      'correct': "a f̀ɔn à",
+      'fr': "Cheveux",
+      'options': ["Akɔ́nta", "Asá", "Ɖà"],
+      'correct': "Ɖà",
       'audio': "bjr.mp3",
       'explanation': "Correct : 'a f̀ɔn à' signifie 'Bonjour' en Fon."
     },
     {
-      'fr': "Comment vas-tu ?",
-      'options': ["nɛ a de gbɔn ?", "A kpe nu", "Dada gbé"],
-      'correct': "nɛ a de gbɔn ?",
+      'fr': "Tête",
+      'options': ["Akɔ́nta", "Ɖà", "Ta"],
+      'correct': "Ta",
       'audio': "cmtvt.mp3",
       'explanation': "Correct : 'nɛ a de gbɔn ?' signifie 'Comment vas-tu ?' en Fon."
     },
     {
-      'fr': "Merci beaucoup",
-      'options': ["Mè do wè", "A kpe nu", "Tɔn gbé"],
-      'correct': "A kpe nu",
+      'fr': "la cuisse",
+      'options': ["Afɔví", "Asá", "Tɔn gbé"],
+      'correct': "Asá",
       'audio': "merci.mp3",
       'explanation': "Correct : 'A kpe nu' signifie 'Merci beaucoup' en Fon."
     },
     {
-      'fr': "Au revoir",
-      'options': ["ma yi bo wa", "A fon gbé", "Dɔ gbe na ?"],
-      'correct': "ma yi bo wa",
+      'fr': "la jambe",
+      'options': ["Gɛtɛ́", "A fon gbé", "Dɔ gbe na ?"],
+      'correct': "Gɛtɛ́",
       'audio': "av.mp3",
       'explanation': "Correct : 'ma yi bo wa' signifie 'Au revoir' en Fon."
     },

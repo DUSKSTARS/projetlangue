@@ -23,29 +23,29 @@ class _ExerciceFontroisState extends State<ExerciceFontrois> {
   // Liste des questions avec leurs réponses, options, audio, etc.
   final List<Map<String, dynamic>> exercices = [
     {
-      'fr': "Bonjour",
-      'options': ["a f̀ɔn à", "Dada gbé", "Mè do wè"],
+      'fr': "Blanc",
+      'options': ["Síká", "Kwlélésìn", "Wewé"],
       'correct': "a f̀ɔn à",
       'audio': "bjr.mp3",
       'explanation': "Correct : 'a f̀ɔn à' signifie 'Bonjour' en Fon."
     },
     {
-      'fr': "Comment vas-tu ?",
-      'options': ["nɛ a de gbɔn ?", "A kpe nu", "Dada gbé"],
+      'fr': "bleu",
+      'options': ["Vɔvɔ", "Fɛ́sínɔ̀", "Kɔ́sínnɔ̀"],
       'correct': "nɛ a de gbɔn ?",
       'audio': "cmtvt.mp3",
       'explanation': "Correct : 'nɛ a de gbɔn ?' signifie 'Comment vas-tu ?' en Fon."
     },
     {
-      'fr': "Merci beaucoup",
-      'options': ["Mè do wè", "A kpe nu", "Tɔn gbé"],
+      'fr': "Vert",
+      'options': ["Amamǔ", "Vɔvɔ", "Koklojó"],
       'correct': "A kpe nu",
       'audio': "merci.mp3",
       'explanation': "Correct : 'A kpe nu' signifie 'Merci beaucoup' en Fon."
     },
     {
-      'fr': "Au revoir",
-      'options': ["ma yi bo wa", "A fon gbé", "Dɔ gbe na ?"],
+      'fr': "Violet",
+      'options': ["Kwlélésìn", "Amamǔ", "Kɔ́sínnɔ̀"],
       'correct': "ma yi bo wa",
       'audio': "av.mp3",
       'explanation': "Correct : 'ma yi bo wa' signifie 'Au revoir' en Fon."

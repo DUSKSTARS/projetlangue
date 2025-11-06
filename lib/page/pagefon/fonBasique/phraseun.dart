@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:projetlangue/page/pagefon/fonBasique/exoun.dart';
+
 
 class PhrPage extends StatefulWidget {
   @override
@@ -110,6 +112,22 @@ class _PhrPageState extends State<PhrPage> {
                                   color: Colors.grey,
                                 ),
                               ),
+
+
+                              Text("Connaissance",
+                                style: TextStyle(fontSize: 20)),
+                                SizedBox(height: 20),
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ExerciceFonun(),
+                                      ),
+                                    );
+                                  },
+                                  child: Text("Page de test"),
+                                ),
                             ],
                           ),
                         ),

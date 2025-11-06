@@ -123,7 +123,7 @@ class _CorpsPageState extends State<CorpsPage> {
               SizedBox(height: 20),
               Text("Ta [ta]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 1) ...[
-              Image.asset('assets/images/cheveux.jpg', width: 200, height: 200),
+              Image.asset('assets/images/cheveux.png', width: 200, height: 200),
               SizedBox(height: 20),
               Text("Cheveux", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
@@ -195,13 +195,13 @@ class _CorpsPageState extends State<CorpsPage> {
               SizedBox(height: 20),
               Text("Alɔví [alorvi]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 13) ...[
-              Image.asset('assets/images/cuisse.jpg', width: 200, height: 200),
+              Image.asset('assets/images/cuisse.png', width: 200, height: 200),
               SizedBox(height: 20),
               Text("la cuisse", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),
               Text("Asá [assa]", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 14) ...[
-              Image.asset('assets/images/cuisse.jpg', width: 200, height: 200),
+              Image.asset('assets/images/jambe.png', width: 200, height: 200),
               SizedBox(height: 20),
               Text("la jambe", style: TextStyle(fontSize: 20)),
               SizedBox(height: 20),

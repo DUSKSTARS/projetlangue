@@ -23,8 +23,8 @@ class _ExerciceFonState extends State<ExerciceFon> {
 
   // Liste de tous les exercices disponibles (français -> fon)
   final List<Map<String, String>> allExercices = [
-    {'fr': "Bonjour", 'fon': "a fɔ̀n à"},
-    {'fr': "Comment vas-tu ?", 'fon': "nɛ a de gbɔn ?"},
+    {'fr': "Bonjour", 'fon': "Dóo núwe !"},
+    {'fr': "Comment vas-tu ?", 'fon': "nɛ a dé gbɔn ?"},
     {'fr': "Merci beaucoup", 'fon': "A kpe nu"},
     {'fr': "Au revoir", 'fon': "ma yi bo wa"},
     {'fr': "Dieu", 'fon': "Mawu"},
