@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projetlangue/page/pagefon/fon.dart';
+import 'package:projetlangue/page/pageyoruba/yoruba.dart';
 
 
 class FrancePage extends StatelessWidget {
@@ -31,7 +32,15 @@ class FrancePage extends StatelessWidget {
                     );
               }, child: Text("    Fon    ")),
               SizedBox(height: 20),
-              ElevatedButton(onPressed: () {}, child: Text("    Yoruba    ")),
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                      builder: (context)
+                        {
+                          return YorubaPage();
+                        }
+                      )
+                    );
+              }, child: Text("    Yoruba    ")),
               SizedBox(height: 20),
               ElevatedButton(onPressed: () {}, child: Text("    Dendi    ")),
               SizedBox(height: 20),
