@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 // Import de la page du niveau 1
-import 'package:projetlangue/page/pageyoruba/fonjeu/exojeuone.dart';
+import 'package:projetlangue/page/pageyoruba/yorubajeu/exojeuone.dart';
 // Import de la page du niveau 2
-import 'package:projetlangue/page/pageyoruba/fonjeu/exojeutwo.dart';
+import 'package:projetlangue/page/pageyoruba/yorubajeu/exojeutwo.dart';
 // Import de la page du niveau 3
-import 'package:projetlangue/page/pageyoruba/fonjeu/exojeuthree.dart';
+import 'package:projetlangue/page/pageyoruba/yorubajeu/exojeuthree.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Déclaration d'un widget Stateful pour la page principale du jeu
