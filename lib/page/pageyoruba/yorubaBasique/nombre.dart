@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:projetlangue/page/pageyoruba/fonBasique/exodeux.dart';
+import 'package:projetlangue/page/pageyoruba/yorubaBasique/exodeux.dart';
 
 class NbrPage extends StatefulWidget {
   @override

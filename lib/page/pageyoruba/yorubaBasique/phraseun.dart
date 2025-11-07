@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:projetlangue/page/pageyoruba/fonBasique/exoun.dart';
+import 'package:projetlangue/page/pageyoruba/yorubaBasique/exoun.dart';
 
 
 class PhrPage extends StatefulWidget {
