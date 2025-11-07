@@ -13,33 +13,35 @@ class _PhrPageState extends State<PhrPage> {
   double volume = 1.0; // Volume par défaut (100%)
 
   final List<Map<String, String>> phrases = [
-    {'fr': "Bonjour", 'fon': "Dóo núwe", 'audio': "bjr.mp3"},
-    {'fr': "Comment vas-tu ?", 'fon': "nɛ a de gbɔn ?", 'audio': "cmtvt.mp3"},
-    {'fr': "Merci beaucoup", 'fon': "A kpe nu", 'audio': "merci.mp3"},
-    {'fr': "Je t'aime", 'fon': "Un nyì wan nù wé", 'audio': "jetaime.mp3"},
-    {'fr': "Au revoir", 'fon': "Dada gbé", 'audio': "nnn.mp3"},
-    {'fr': "Non", 'fon': "Eho", 'audio': "nnn.mp3"},
-    {'fr': "Mon Dieu !", 'fon': "Mawu cɛ", 'audio': "nnn.mp3"},
-    
-    {'fr': "Je suis fâché à toi.", 'fon': "Un sin xome nu we", 'audio': "nnn.mp3"},
-    {'fr': "C'est faux, ce n'est pas vrai.", 'fon': "A din gbawe, nu gbo we ã", 'audio': "nnn.mp3"},
-    {'fr': "Merci beaucoup", 'fon': "A houanu kaka", 'audio': "nnn.mp3"},
-    {'fr': "Eh, toi, le blanc, viens m'acheter quelque chose!", 'fon': "Yovo! Wa xo nu!", 'audio': "nnn.mp3"},
-    {'fr': "Donnes mes salutations aux tiens de ma part.", 'fon': "A na dogbe me towele nu mi,...Eeen, ye na se.", 'audio': "nnn.mp3"},
-    {'fr': "Viens chez moi et nous pourrons discuter.", 'fon': "A na wa gonche kpo mi no do xo kpede.", 'audio': "nnn.mp3"},
-    {'fr': "Parlez-vous le fon ? Non, je ne parle pas le fon", 'fon': "A se Fongbe a?...Eho, Un se fongbe a.", 'audio': "nnn.mp3"},
-    {'fr': "Oui, je parle bien le fon", 'fon': "Eeen, Un se fongbe bi", 'audio': "nnn.mp3"},
-    {'fr': "Parles-tu anglais ?", 'fon': "A se glensigbe we a?", 'audio': "nnn.mp3"},
-    {'fr': "Parles-tu français ?", 'fon': "A se Flansegbe we a?", 'audio': "nnn.mp3"},
-    {'fr': "Je vais voyager", 'fon': "Un na yi tonme", 'audio': "nnn.mp3"},
-    {'fr': "C'est cher !", 'fon': "Ah! E ve axi din!", 'audio': "nnn.mp3"},
-    {'fr': "C'est beaucoup !", 'fon': "E sukpo din!", 'audio': "nnn.mp3"},
-    {'fr': "Waouh ! Le blanc parle le Fon !", 'fon': "Ah! Yovo se Fongbe!", 'audio': "nnn.mp3"},
-    {'fr': "Tes habits sont vraiment beaux", 'fon': "Avo towe, enyo dekpe din.", 'audio': "nnn.mp3"},
-    {'fr': "Va et reviens. J'irai et je reviendrai.", 'fon': "Bo yi bo wa...ma yi bo wa", 'audio': "nnn.mp3"},
-    {'fr': "Sors de là.", 'fon': "Bo yi", 'audio': "nnn.mp3"},
-    {'fr': "Doucement", 'fon': "Dedeme", 'audio': "nnn.mp3"},
+    {'fr': "Bonjour", 'fon': "Ẹ káàárọ̀", 'audio': "bjr.mp3"},
+    {'fr': "Comment vas-tu ?", 'fon': "Báwo ni?", 'audio': "cmtvt.mp3"},
+    {'fr': "Merci beaucoup", 'fon': "Ẹ ṣé gan", 'audio': "merci.mp3"},
+    {'fr': "Je t'aime", 'fon': "Mo nífẹ̀ẹ́ rẹ", 'audio': "jetaime.mp3"},
+    {'fr': "Au revoir", 'fon': "Ó dábò", 'audio': "nnn.mp3"},
+    {'fr': "Non", 'fon': "Rárá", 'audio': "nnn.mp3"},
+    {'fr': "Mon Dieu !", 'fon': "Olúwa mi!", 'audio': "nnn.mp3"},
+
+    {'fr': "Je suis fâché à toi.", 'fon': "Mo bínú sí ẹ", 'audio': "nnn.mp3"},
+    {'fr': "C'est faux, ce n'est pas vrai.", 'fon': "Kò tọ́, kò jẹ́ òtítọ́", 'audio': "nnn.mp3"},
+    {'fr': "Merci beaucoup", 'fon': "Ẹ ṣé gan", 'audio': "nnn.mp3"},
+    {'fr': "Eh, toi, le blanc, viens m'acheter quelque chose!", 'fon': "Yòvò! Wá ra nkan fún mi!", 'audio': "nnn.mp3"},
+    {'fr': "Donnes mes salutations aux tiens de ma part.", 'fon': "Fi ìkíni mi ránṣẹ́ sí ẹbí rẹ", 'audio': "nnn.mp3"},
+    {'fr': "Viens chez moi et nous pourrons discuter.", 'fon': "Wá sí ilé mi, a ó lè sọrọ̀", 'audio': "nnn.mp3"},
+    {'fr': "Parlez-vous le fon ? Non, je ne parle pas le fon", 'fon': "Ṣé o mọ Fongbé? Rárá, mi ò mọ Fongbé", 'audio': "nnn.mp3"},
+    {'fr': "Oui, je parle bien le fon", 'fon': "Béèni, mo mọ Fongbé dáadáa", 'audio': "nnn.mp3"},
+    {'fr': "Parles-tu anglais ?", 'fon': "Ṣé o mọ Gẹ̀ẹ́sì?", 'audio': "nnn.mp3"},
+    {'fr': "Parles-tu français ?", 'fon': "Ṣé o mọ Faranṣé?", 'audio': "nnn.mp3"},
+    {'fr': "Je vais voyager", 'fon': "Mo ń lọ ìrìn-àjò", 'audio': "nnn.mp3"},
+    {'fr': "C'est cher !", 'fon': "Ó jẹ́ gíga!", 'audio': "nnn.mp3"},
+    {'fr': "C'est beaucoup !", 'fon': "Ó pọ̀!", 'audio': "nnn.mp3"},
+    {'fr': "Waouh ! Le blanc parle le Fon !", 'fon': "Ah! Yòvò ń sọ Fongbé!", 'audio': "nnn.mp3"},
+    {'fr': "Tes habits sont vraiment beaux", 'fon': "Àṣọ rẹ jẹ́ lẹ́wà", 'audio': "nnn.mp3"},
+    {'fr': "Va et reviens. J'irai et je reviendrai.", 'fon': "Lọ, kí o sì padà. Èmi ó lọ, èmi ó sì padà", 'audio': "nnn.mp3"},
+    {'fr': "Sors de là.", 'fon': "Jádè níbè", 'audio': "nnn.mp3"},
+    {'fr': "Doucement", 'fon': "Ní ìfẹ̀", 'audio': "nnn.mp3"},
   ];
+
+
 
     void playAudio(String fileName) async {
       try {

@@ -113,10 +113,10 @@ class _CltPageState extends State<CltPage> {
               SizedBox(height: 20),
               Text(
                 "Vert",
-                style: TextStyle(color: Colors.green, fontSize: 20), // tu peux aussi utiliser la couleur exacte
+                style: TextStyle(color: Colors.green, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Amamǔ (Amanmoun)", style: TextStyle(fontSize: 20)),
+              Text("Aláwọ̀ ewé (aláwó ehwé)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 1) ...[
               Image.asset('assets/images/jaune.png', width: 200, height: 200),
               SizedBox(height: 20),
@@ -125,7 +125,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Colors.yellow, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Koklojó (Koklodjo)", style: TextStyle(fontSize: 20)),
+              Text("Ofeefee (Ofeefee)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 2) ...[
               Image.asset('assets/images/rouge.jpg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -134,7 +134,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Colors.red, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Vɔvɔ (Vorvor)", style: TextStyle(fontSize: 20)),
+              Text("Pupa (poo-pah)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 3) ...[
               Image.asset('assets/images/bleu.jpg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -143,7 +143,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Colors.blue, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Fɛ́sínɔ̀ (Fèsinnon)", style: TextStyle(fontSize: 20)),
+              Text("Búlù (Bùlu)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 4) ...[
               Image.asset('assets/images/noir.jpeg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -152,7 +152,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Wìwì (Wouiwoui)", style: TextStyle(fontSize: 20)),
+              Text("Dúdú (dudu)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 5) ...[
               Image.asset('assets/images/blanc.png', width: 200, height: 200),
               SizedBox(height: 20),
@@ -161,7 +161,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Wewé (Wéwé)", style: TextStyle(fontSize: 20)),
+              Text("Funfun (Funfun)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 6) ...[
               Image.asset('assets/images/cendre.jpg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -170,7 +170,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Color(0xFFB0B0B0), fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Afín (afin)", style: TextStyle(fontSize: 20)),
+              Text("Eeru (Eeru)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 7) ...[
               Image.asset('assets/images/marron.jpeg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -179,7 +179,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Color(0xFF8B4513), fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Kɔ́sínnɔ̀ (Korsinnon)", style: TextStyle(fontSize: 20)),
+              Text("Brown (Bouraoun)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 8) ...[
               Image.asset('assets/images/violet.png', width: 200, height: 200),
               SizedBox(height: 20),
@@ -188,7 +188,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Color(0xFF800080), fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Kwlélésìn (Kouélésin)", style: TextStyle(fontSize: 20)),
+              Text("Àdáwọ̀n (Adawon)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 9) ...[
               Image.asset('assets/images/or.jpg', width: 200, height: 200),
               SizedBox(height: 20),
@@ -197,7 +197,7 @@ class _CltPageState extends State<CltPage> {
                 style: TextStyle(color: Color(0xFFFFD700), fontSize: 20),
               ),
               SizedBox(height: 20),
-              Text("Síká (Sika)", style: TextStyle(fontSize: 20)),
+              Text("Wúrà (Wura)", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 10) ...[
               Text("Page spéciale",
               style: TextStyle(fontSize: 20)),

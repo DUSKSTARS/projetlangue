@@ -102,39 +102,39 @@ class _NbrPageState extends State<NbrPage> {
                   if (textIndex == 0) ...[
                     Text("Un", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("ɖokpó\n[dokpo]", style: TextStyle(fontSize: 20)),
+                    Text("Ọ̀kan\n[Okan]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 1) ...[
                     Text("Deux", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Wè\n[We]", style: TextStyle(fontSize: 20)),
-                  ]else if (textIndex == 2) ...[
+                    Text("Méjì\n[Meji]", style: TextStyle(fontSize: 20)),
+                  ] else if (textIndex == 2) ...[
                     Text("Trois", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Atɔ̀n\n[Aton]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́ta\n[Méta]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 3) ...[
                     Text("Quatre", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Ɛnɛ̀\n[Ènin]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́rin\n[Mérin]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 4) ...[
                     Text("Cinq", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Atɔ́ɔ́n\n[Aton]", style: TextStyle(fontSize: 20)),
+                    Text("Márùn-ún\n[Marun-un]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 5) ...[
                     Text("Six", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Ayizɛ́n\n[Ayizin]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́fa\n[Méfa]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 6) ...[
                     Text("Sept", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Tɛ́nwè\n[Tinwé]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́jọ\n[Méjo]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 7) ...[
                     Text("Huit", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Tántɔ̀n\n[Tanton]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́wàá\n[Méwàá]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 8) ...[
                     Text("Neuf", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
-                    Text("Tɛ́nnɛ̀\n[Tinnin]", style: TextStyle(fontSize: 20)),
+                    Text("Mẹ́sán-án\n[Mésan-an]", style: TextStyle(fontSize: 20)),
                   ] else if (textIndex == 9) ...[
                     Text("Page spéciale", style: TextStyle(fontSize: 20)),
                     SizedBox(height: 20),
