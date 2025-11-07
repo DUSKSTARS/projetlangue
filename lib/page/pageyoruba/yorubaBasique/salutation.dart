@@ -157,7 +157,7 @@ class _SltPageState extends State<SltPage> {
               SizedBox(height: 20),
               Text("Je suis heureux que tu sois venu", style: TextStyle(color: const Color.fromARGB(255, 24, 48, 184),fontSize: 20)),
               SizedBox(height: 20),
-              Text("wǎ è a wa ɔ́ víví nú mi", style: TextStyle(fontSize: 20)),
+              Text("Inú mi dùn pé o wá", style: TextStyle(fontSize: 20)),
             ] else if (textIndex == 9) ...[
               Text("Page spéciale",
               style: TextStyle(fontSize: 20)),
